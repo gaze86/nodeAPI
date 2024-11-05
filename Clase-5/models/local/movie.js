@@ -3,7 +3,7 @@ import crypto from "node:crypto";
 // Leer el JSON en ESM recomendado por ahora
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url); // -> direccion del archivo actual
-const movies = require("../movies.json"); // -> raiz a movies.json
+const movies = require("../../movies.json"); // -> raiz a movies.json
 
 export class MovieModel {
   

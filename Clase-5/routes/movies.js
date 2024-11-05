@@ -1,12 +1,14 @@
 import { Router } from "express";
 import { MovieController } from "../controllers/movies.js";
+import MovieModel from "../models/mysql/movie.js";
 
 export const moviesRouter = Router();
+const movieController = new MovieController( {MovieModel} );
 
-moviesRouter.get("/", MovieController.getAll);
-moviesRouter.post("/", MovieController.create);
+moviesRouter.get("/", movieController.getAll);
+moviesRouter.post("/", movieController.create);
 
-moviesRouter.get("/:id", MovieController.getById);
-moviesRouter.patch("/:id", MovieController.update);
-moviesRouter.delete("/:id", MovieController.delete);
-moviesRouter.get("/page/:pag", MovieController.pagination);
+moviesRouter.get("/:id", movieController.getById);
+moviesRouter.patch("/:id", movieController.update);
+moviesRouter.delete("/:id", movieController.delete);
+moviesRouter.get("/page/:pag", movieController.pagination);
