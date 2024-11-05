@@ -2,7 +2,7 @@
 GET http://localhost:1234/movies
 
 ### Recuperar una película por id
-GET http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+GET http://localhost:1234/movies/71f58090-9941-11ef-bc87-14cb19858910
 
 ### Recuperar todas las películas por género
 GET http://localhost:1234/movies?genre=action
@@ -22,7 +22,7 @@ Content-Type: application/json
 }
 
 ### Actualizar una película
-PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+PATCH http://localhost:1234/movies/71f57acd-9941-11ef-bc87-14cb19858910
 Content-Type: application/json
 
 {
@@ -31,8 +31,8 @@ Content-Type: application/json
     "director": "jfvuy"
 }
 
-### Recuperar una películas por página
-GET http://localhost:1234/movies/page/1
-
 ### Eliminar una película
-DELETE http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+DELETE http://localhost:1234/movies/cd60d646-9b8b-11ef-bc87-14cb19858910
+
+### Recuperar una películas por página
+GET http://localhost:1234/movies/page/4
